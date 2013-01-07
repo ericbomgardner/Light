@@ -9,26 +9,42 @@
 #import "LightViewController.h"
 
 @interface LightViewController ()
-
 @end
 
 @implementation LightViewController
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    AVCaptureDevice * device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    if([device hasTorch] && [device lockForConfiguration:NULL]) {
+        if([device torchMode]==AVCaptureTorchModeOff) {
+            [device setTorchMode:AVCaptureTorchModeOn];
+            [self.view setBackgroundColor:[UIColor whiteColor]];
+            [device unlockForConfiguration];
+        }
+        else if([device torchMode]==AVCaptureTorchModeOn) {
+            [device setTorchMode:AVCaptureTorchModeOff];
+            [self.view setBackgroundColor:[UIColor blackColor]];
+            [device unlockForConfiguration];
+        }
+    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void)dealloc {
+    [super dealloc];
+}
 @end

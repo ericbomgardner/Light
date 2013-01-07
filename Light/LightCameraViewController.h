@@ -1,5 +1,5 @@
 //
-//  LightViewController.h
+//  LightCameraViewController.h
 //  Light
 //
 //  Created by Eric Bomgardner on 9/13/12.
@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AVFoundation/AVFoundation.h>
-@interface LightViewController : UIViewController
+
+@interface LightCameraViewController : UIViewController
+
 @end

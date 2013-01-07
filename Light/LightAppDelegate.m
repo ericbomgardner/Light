@@ -22,7 +22,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // Override point for customization after application launch.
+
+    AVCaptureDevice * device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    if([device hasTorch] && [device lockForConfiguration:NULL]) {
+        [device setTorchMode:AVCaptureTorchModeOn];
+        [device unlockForConfiguration];
+        [self.viewController.view setBackgroundColor:[UIColor whiteColor]];
+    }
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
     self.viewController = [[[LightViewController alloc] initWithNibName:@"LightViewController" bundle:nil] autorelease];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
@@ -43,7 +52,12 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    AVCaptureDevice * device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    if([device hasTorch] && [device lockForConfiguration:NULL]) {
+        [device setTorchMode:AVCaptureTorchModeOn];
+        [device unlockForConfiguration];
+        [self.viewController.view setBackgroundColor:[UIColor whiteColor]];
+    }
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

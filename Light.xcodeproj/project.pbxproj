@@ -15,6 +15,9 @@
 		07FB589F16019272008F5316 /* LightAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FB589E16019272008F5316 /* LightAppDelegate.m */; };
 		07FB58A216019272008F5316 /* LightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FB58A116019272008F5316 /* LightViewController.m */; };
 		07FB58A516019272008F5316 /* LightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07FB58A316019272008F5316 /* LightViewController.xib */; };
+		07FB58B1160198D7008F5316 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FB58B0160198D7008F5316 /* AVFoundation.framework */; };
+		07FB58B31601B1C6008F5316 /* Retina_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FB58B21601B1C6008F5316 /* Retina_icon.png */; };
+		07FB58B51601B20B008F5316 /* SD_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FB58B41601B20B008F5316 /* SD_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		07FB58A016019272008F5316 /* LightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LightViewController.h; sourceTree = "<group>"; };
 		07FB58A116019272008F5316 /* LightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LightViewController.m; sourceTree = "<group>"; };
 		07FB58A416019272008F5316 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LightViewController.xib; sourceTree = "<group>"; };
+		07FB58B0160198D7008F5316 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		07FB58B21601B1C6008F5316 /* Retina_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Retina_icon.png; sourceTree = "<group>"; };
+		07FB58B41601B20B008F5316 /* SD_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SD_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07FB58B1160198D7008F5316 /* AVFoundation.framework in Frameworks */,
 				07FB588F16019272008F5316 /* UIKit.framework in Frameworks */,
 				07FB589116019272008F5316 /* Foundation.framework in Frameworks */,
 				07FB589316019272008F5316 /* CoreGraphics.framework in Frameworks */,
@@ -50,6 +57,9 @@
 		07FB587F16019272008F5316 = {
 			isa = PBXGroup;
 			children = (
+				07FB58B41601B20B008F5316 /* SD_icon.png */,
+				07FB58B21601B1C6008F5316 /* Retina_icon.png */,
+				07FB58B0160198D7008F5316 /* AVFoundation.framework */,
 				07FB589416019272008F5316 /* Light */,
 				07FB588D16019272008F5316 /* Frameworks */,
 				07FB588B16019272008F5316 /* Products */,
@@ -152,6 +162,8 @@
 			files = (
 				07FB589916019272008F5316 /* InfoPlist.strings in Resources */,
 				07FB58A516019272008F5316 /* LightViewController.xib in Resources */,
+				07FB58B31601B1C6008F5316 /* Retina_icon.png in Resources */,
+				07FB58B51601B20B008F5316 /* SD_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
